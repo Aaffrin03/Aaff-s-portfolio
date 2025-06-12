@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0f0f2f;
+  color: #ffffff;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+/* Sticky Navbar */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0f0f2f;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff00ff;
+  background-color: rgba(255, 0, 255, 0.1);
+}
+
+/* Intro Section */
+#intro {
+  padding: 40px 20px 20px;
+  background: linear-gradient(135deg, #0f0f2f 0%, #1a0033 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-header {
+  text-align: center;
+  margin: 0;
+}
+
+.intro-header h1 {
+  font-size: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 12px #00ffff;
+  margin: 0;
+}
+
+.intro-header h2 {
+  font-size: 1.5rem;
+  color: #ff00ff;
+  margin-top: 0;
+  margin-bottom: 120px;
+}
+
+#typewriter {
+  font-weight: 600;
+  color: #ff00ff;
+  border-right: 2px solid #ff00ff;
+  padding-left: 8px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: #ff00ff; }
+  50% { border-color: transparent; }
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto 60px;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccccff;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.intro-content span {
+  color: #ff00ff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-shadow: 0 0 12px #ff00ff;
+}
+
+/* Skills Section */
+#skills {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #1a0033;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.skill-subheading {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skill-card {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffff44;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00ffffaa;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Certifications */
+#certifications {
+  padding: 60px 20px;
+  background: #1a0033;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffff44;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #ff00ffaa;
+}
+
+.cert-card h3 {
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.cert-card p {
+  color: #ccccff;
+  font-size: 0.95rem;
+}
+
+/* Contact Section */
+#contact {
+  background: #1a0033;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #ccccff;
+  margin: 10px 0;
+}
+
+.contact-info strong {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.contact-info a {
+  color: #00ffff; /* Neon blue */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff00ff; /* Neon pink on hover */
+  text-decoration: underline;
+}
+
+/* ✅ Prevent visited links from changing color */
+.contact-info a:visited {
+  color: #00ffff; /* Force neon blue even after visiting */
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ← Center content */
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #ccccff;
+  justify-content: center; /* ← Center icons + text */
+}
+
+.contact-icon svg {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  fill: #00ffff;
+}
+
+.contact-info a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff00ff;
+  text-decoration: underline;
+}
+
+.contact-info a:visited {
+  color: #00ffff; /* Keep same neon after visiting */
+}
+
+.contact-text {
+  color: #ccccff;
+  font-weight: 600;
+}
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 255, 255, 0.1);
+  border: 1px solid #00ffff99;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.contact-button img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(1.5) saturate(2);
+}
+
+.contact-button:hover {
+  background-color: rgba(255, 0, 255, 0.1);
+  color: #ff00ff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px #ff00ff66;
+}
+.footer {
+  background-color: #0f0f2f;
+  color: #00ffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.95rem;
+  border-top: 1px solid #00ffff33;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.footer strong {
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff;
+}
