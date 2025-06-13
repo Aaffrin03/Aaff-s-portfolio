@@ -38,3 +38,12 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function () {
   type();
 });
+<script>
+  // Automatically close menu after clicking a link
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+</script>
+
